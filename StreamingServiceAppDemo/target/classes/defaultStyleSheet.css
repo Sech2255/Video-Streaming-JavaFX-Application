@@ -1,0 +1,68 @@
+#root{
+    -fx-background-color: #1A1A1D;
+}
+
+#vBoxCenter{
+    -fx-background-color: #1A1A1D;
+}
+
+#vBoxTop{
+    -fx-background-color: linear-gradient(to right, #0096FF, #45A29E);
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-color: #45A29E;
+    -fx-border-width: 2;
+}
+
+#tagLine{
+    -fx-text-fill: linear-gradient(to right, #0096FF, #45A29E);
+}
+
+#webLoad{
+    -fx-accent: #45A29E;
+}
+
+.Vbox:hover{
+    -fx-underline: true;
+    -fx-strikethrough: true;
+}
+
+#scrollpaneContainer{
+    -fx-background-color: #1A1A1D;
+}
+
+.scroll-bar:vertical{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0.0em;
+    -fx-border-radius: 2.0em;
+}
+
+.scroll-bar:vertical .increment-button,
+.scroll-bar:vertical .decrement-button{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0.0em;
+    -fx-padding: 0.0 0.0 10.0 0.0;
+}
+
+.scroll-bar:vertical .thumb{
+    -fx-background-color:derive(#45A29E, 90%);
+    -fx-background-insets: 2.0, 0.0, 0.0;
+    -fx-background-radius: 5em;
+}
+
+.scroll-bar:vertical .thumb:hover{
+    -fx-background-color:derive(#45A29E, 10%);
+    -fx-background-insets: 2.0, 0.0, 0.0;
+    -fx-background-radius: 5em;
+}
+
+
+
+
+

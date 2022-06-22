@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane fx:id="root" minHeight="698.18" minWidth="1241.82" prefHeight="698.18" prefWidth="1241.82" stylesheets="@../../../defaultStyleSheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.groupassignment.streamingserviceappdemo.ServiceStreamController">
+   <left>
+      <HBox fx:id="hBoxLeft" prefHeight="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <HBox fx:id="hBoxRight" prefHeight="100.0" BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <VBox fx:id="vBoxTop" prefHeight="50.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="appLogo">
+               <graphic>
+                  <ImageView fx:id="logoID" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../HSLogo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="10.0" top="3.0" />
+               </VBox.margin></Label>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <VBox fx:id="vBoxBottom" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <ScrollPane fx:id="scrollpaneContainer" stylesheets="@../../../defaultStyleSheet.css" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="vBoxCenter">
+               <children>
+                  <StackPane prefHeight="600.0">
+                     <children>
+                        <WebView fx:id="webView" prefHeight="0.0" prefWidth="500.0" stylesheets="@../../../defaultStyleSheet.css">
+                           <StackPane.margin>
+                              <Insets bottom="15.0" left="10.0" right="820.0" top="15.0" />
+                           </StackPane.margin>
+                        </WebView>
+                        <ProgressBar fx:id="webLoad" prefWidth="200.0" progress="0.0" stylesheets="@../../../defaultStyleSheet.css">
+                           <StackPane.margin>
+                              <Insets right="755.0" />
+                           </StackPane.margin>
+                        </ProgressBar>
+                        <Label fx:id="tagLine" stylesheets="@../../../defaultStyleSheet.css" text="The quality streamer for your convenience">
+                           <font>
+                              <Font name="Cambria" size="36.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets right="755.0" />
+                           </StackPane.margin>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <Rectangle fx:id="bannerRect" arcHeight="5.0" arcWidth="5.0" fill="#45a29e" height="2.0" stroke="#45a29e" strokeType="INSIDE" width="1200.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Rectangle>
+                  <VBox fx:id="genre1ParentContainer">
+                     <children>
+                        <Label fx:id="genreLabel1" alignment="TOP_LEFT" text="Sci-Fi" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="10.0" top="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Tw Cen MT" size="14.0" />
+                           </font>
+                        </Label>
+                        <Rectangle fx:id="SciFiRect" arcHeight="5.0" arcWidth="5.0" fill="#45a29e" height="2.0" stroke="#45a29e" strokeType="INSIDE" width="30.0">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="10.0" />
+                           </VBox.margin>
+                        </Rectangle>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <HBox fx:id="genre1ChildContainer" prefHeight="100.0" prefWidth="200.0" stylesheets="@../../../defaultStyleSheet.css">
+                                 <children>
+                                    <VBox fx:id="scifiVbox1" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../AdventureCat/lightyearPoster.jpg" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Label text="Lightyear" textFill="#45a29e">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="scifiVbox2" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../Sci-FiCat/everythingeverywherePoster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Everything Everywhere All At Once" textFill="#45a29e">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="scifiVbox3" prefHeight="200.0" prefWidth="100.0" stylesheets="@../../../defaultStyleSheet.css">
+                                       <children>
+                                          <ImageView fx:id="ba" fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../Sci-FiCat/blackadamPoster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Black Adam" textFill="#45a29e">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="scifiVbox4" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../Sci-FiCat/crimesofthefuturePoster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Crimes of the Future" textFill="#45a29e">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="scifiVbox5" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../Sci-FiCat/maikathegirlPoster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Maika The Girl from Another Galaxy" textFill="#45a29e">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="scifiVbox6" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../Sci-FiCat/jurassicworld3Poster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Jurassic World Dominion" textFill="#45a29e">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="scifiVbox7" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../Sci-FiCat/obiwanPoster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Obi-Wan Kenobi" textFill="#45a29e">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="scifiVbox8" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../Sci-FiCat/drstrange2Poster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Dr. Strange in the Multiverse of Madness" textFill="#45a29e">
+                                             <font>
+                                                <Font name="Tw Cen MT" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets />
+                                 </StackPane.margin>
+                              </HBox>
+                              <Label fx:id="cat1leftarrow" onMousePressed="#cat1leftclick" stylesheets="@../../../defaultStyleSheet.css">
+                                 <graphic>
+                                    <ImageView fx:id="scifiLeftArrow" fitHeight="55.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../blank.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                 </graphic>
+                                 <StackPane.margin>
+                                    <Insets bottom="30.0" right="1910.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <Label fx:id="cat1rightarrow" onMousePressed="#cat1rightclick" stylesheets="@../../../defaultStyleSheet.css">
+                                 <graphic>
+                                    <ImageView fitHeight="55.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../blank.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <StackPane.margin>
+                                    <Insets bottom="30.0" left="440.0" />
+                                 </StackPane.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets right="40.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets right="40.0" />
+                           </padding>
+                        </StackPane>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox fx:id="genre2ParentContainer" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="genreLabel2" alignment="TOP_LEFT" text="Drama" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="10.0" top="25.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Tw Cen MT" size="14.0" />
+                           </font>
+                        </Label>
+                        <Rectangle fx:id="DramaRect" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="2.0" stroke="#45a29e" strokeType="INSIDE" width="37.0">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="10.0" />
+                           </VBox.margin>
+                        </Rectangle>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <HBox fx:id="genre2ChildContainer" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox fx:id="dramaVbox1" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../DramaCat/deathonthenilePoster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Death on the Nile" textFill="#45a29e" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="dramaVbox2" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../DramaCat/licoricepizzaPoster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Licorice Pizza" textFill="#45a29e" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="dramaVbox3" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../DramaCat/houseofgucciPoster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="House of Gucci" textFill="#45a29e" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="dramaVbox4" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../DramaCat/belfastPoster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Belfast" textFill="#45a29e" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="dramaVbox5" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../DramaCat/catherinecalledbirdiePoster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Catherine, Called Birdy" textFill="#45a29e" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="dramaVbox6" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../DramaCat/devotionPoster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Devotion" textFill="#45a29e" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="dramaVbox7" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../DramaCat/aftereverhappyPoster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="After Ever Happy" textFill="#45a29e" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="dramaVbox8" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../DramaCat/goodandevilPoster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="The School for Good and Evil" textFill="#45a29e" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Label fx:id="cat2leftarrow" onMousePressed="#cat2leftclick" stylesheets="@../../../defaultStyleSheet.css">
+                                 <graphic>
+                                    <ImageView fitHeight="55.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../blank.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <StackPane.margin>
+                                    <Insets bottom="30.0" right="1990.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <Label fx:id="cat2rightarrow" onMousePressed="#cat2rightclick" stylesheets="@../../../defaultStyleSheet.css">
+                                 <graphic>
+                                    <ImageView fitHeight="55.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../blank.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <StackPane.margin>
+                                    <Insets bottom="30.0" left="360.0" />
+                                 </StackPane.margin>
+                              </Label>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="genre3ParentContainer" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="genreLabel3" alignment="TOP_LEFT" text="Adventure" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="10.0" top="25.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Tw Cen MT" size="14.0" />
+                           </font>
+                        </Label>
+                        <Rectangle fx:id="AdventureRect" arcHeight="5.0" arcWidth="5.0" fill="#45a29e" height="2.0" stroke="#45a29e" strokeType="INSIDE" width="57.0">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="10.0" />
+                           </VBox.margin>
+                        </Rectangle>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <HBox fx:id="genre3ChildContainer" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox fx:id="advVbox1" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../AdventureCat/topgunmaverickPoster.jpg" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Label text="Top Gun Maverick" textFill="#45a29e" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="advVbox2" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../AdventureCat/sonic2Poster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Sonic The Hedgehog 2" textFill="#45a29e" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="advVbox3" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../AdventureCat/pussinbootsPoster.jpg" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Label text="Puss In Boots 2" textFill="#45a29e" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="advVbox4" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../AdventureCat/lostcityPoster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="The Lost City" textFill="#45a29e" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="advVbox5" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../AdventureCat/unchartedPoster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Uncharted" textFill="#45a29e" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="advVbox6" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../AdventureCat/fantasticbeasts3Poster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Fantastic Beasts 3" textFill="#45a29e" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="advVbox7" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../AdventureCat/sing2Poster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Sing 2" textFill="#45a29e" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="advVbox8" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../../../AdventureCat/encantoPoster.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Encanto" textFill="#45a29e" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Label fx:id="cat3leftarrow" onMousePressed="#cat3leftclick" stylesheets="@../../../defaultStyleSheet.css">
+                                 <graphic>
+                                    <ImageView fitHeight="55.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../blank.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <StackPane.margin>
+                                    <Insets bottom="30.0" right="1990.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <Label fx:id="cat3rightarrow" onMousePressed="#cat3rightclick" stylesheets="@../../../defaultStyleSheet.css">
+                                 <graphic>
+                                    <ImageView fitHeight="55.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../blank.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <StackPane.margin>
+                                    <Insets bottom="30.0" left="360.0" />
+                                 </StackPane.margin>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <Rectangle fx:id="bottomRect" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="2.0" stroke="#45a29e" strokeType="INSIDE" width="1200.0">
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="11.0" top="30.0" />
+                           </VBox.margin>
+                        </Rectangle>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ScrollPane>
+   </center>
+</BorderPane>
